@@ -18,7 +18,10 @@ Prerequisites:
 2. Python 3.8.10;
 3. Docker 20.10.21.
 
+The files for the web app are puted in flask-app folder, which contains a Makefile too. 
+
 II. Infrastructure deployed in AWS - VPC, ECS Cluster (ECR, EC Services, Fargate), CI/CD Pipeline accomplished with CodeBuild in AWS.
+Configuration files for the infrastructure are in ecr_ecs folder and 
 
 
 
