@@ -35,5 +35,30 @@ Project folders
   codebuild - here is the terraform configuration for codebuild project;
   buildspec.yml - for codebuild project in AWS;
   secrets.tf - file with secret info for the project. This file is added to .gitignore so it is not in the project repo in GitHub.
+  
+  Main environment components
+  
+  - aws_account - AWS Account ID;
+  - environment - prod;
+  - default aws region - eu-central-1.
+
+Order of deployment in AWS cloud:
+
+  1. Creating and running the code for the network for the whole infrastructure.
+  2. Creating and configuring the S3 bucket.
+  3. Creating and deploying the code for ECRegistry.
+  4. Creating and deploying the configuration for the cluster.
+  5. Creating and deploying the code for Codebuild project in AWS.
+  6. Getting new Github token and adding it in the secrets.tf file.
+
+Commands for deployment of the project
+
+1. terraform init;
+2. terraform validate;
+3. terraform plan;
+4. terraform apply (terraform apply -reconfigure); 
+5. terraform destroy.
+
+The commands are used for every module of the project directory after directory.
 
 
